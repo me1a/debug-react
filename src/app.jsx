@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import './app.less'
 
-class App extends React.Component {
-    render() {
-        return (
-            <div>React Source : root/code/packages</div>
-        )
-    }
+const App = function () {
+  const [count, setCount] = useState(0)
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => setCount((c) => c + 1)}>+</button>
+    </div>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById('app'))
