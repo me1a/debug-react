@@ -1,32 +1,17 @@
 # debug-react
-Quickly set up environment to debug/analyze react source code. Able to specify version(v16+)
 
-迅速搭建React源码调试环境，可指定版本(v16+)
+不编译直接断点调试指定版本 React 源码。
 
-### Usage
 ```
-git clone https://github.com/piscium2010/debug-react.git
-cd debug-react
-yarn
-```
-fetch specified react version
-```
-yarn fetch v16.13.1
-```
+// 安装依赖
+yarn install
 
-### Debug
-code/packages/react/src/ReactElement.js
-```
-export function createElement(type, config, children) {
-  debugger
-  let propName;
-  ...
-```
+// 下载源码到code目录
+yarn fetch v17.0.0
 
-### Run
-```
-npm start
-```
+// 开启调试（包括覆盖一些文件）
+yarn start
 
-visit with chrome http://localhost:8080/
+// vscode调试 f5
 
+```
