@@ -8,7 +8,7 @@
 		"overwrite:1": "babel overwrite/ReactFiberHostConfig.js --out-dir code/packages/react-reconciler/src/ --copy-files",
 		"overwrite:2": "babel overwrite/ReactSharedInternals.js --out-dir code/packages/shared/ --copy-files",
 		"overwrite": "npm run overwrite:0 && npm run overwrite:1 && npm run overwrite:2",
-		"start": "webpack-dev-server --config webpack.dev.js",
+		"start": "npm run overwrite && webpack-dev-server --config webpack.dev.js",
 		"fetch": "node download"
 	},
 	"keywords": [],
